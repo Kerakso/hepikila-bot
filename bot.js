@@ -22,6 +22,7 @@ bot.on("ready", () => {
 });
 
 var i = 0;
+var x = 0;
 
 bot.on("message", async msg => {
 	if(msg.author.bot) return;
@@ -60,6 +61,17 @@ bot.on("message", async msg => {
 
     if(msg.content.includes("cycki") || msg.content.includes("kocham cie") || msg.content.includes("hentai") || msg.content.includes("anal")) {
     	msg.reply("zbok 😒");
+    }
+
+    if(msg.content.includes("<@483650694461521921>") || msg.content.includes("hepi")) {
+    	x++;
+    	if(x > 5) x = 1;
+
+    	if(x == 1) msg.channel.send("Spadaj 😒");
+    	else if(x == 2) msg.channel.send("Mówiłam, żebyś spadał 😒😒");
+    	else if(x == 3) msg.channel.send("Zboku odczep się 😒");
+    	else if(x == 4) return;
+    	else if(x == 5) msg.reply("to zbok 😒 @everyone");
     }
 
 });
