@@ -8,6 +8,7 @@ bot.on("ready", () => {
 	console.log("Połączony.");
 	console.log("Gotowy!\n");
 
+	var z = 0;
 	var i = 0;
     var loop = setInterval(function() {
         i++;
@@ -19,6 +20,28 @@ bot.on("ready", () => {
         else if (i == 2) bot.user.setPresence({game: {name: "I na co się patrzysz?", url: "https://www.twitch.tv/#"}});
         else if (i == 3) bot.user.setPresence({game: {name: "Jest tu " + bot.users.size + " zboków 😒", url: "https://www.twitch.tv/#"}});
     }, 30000);
+
+    var loop2 = setInterval(function() {
+    	var slowkaLosowe = [
+    	"Co tam ludzie?",
+    	"Hej",
+    	"Siemanko",
+    	"Cześć",
+    	"Co u was?",
+    	"Ale zboki z was 😒",
+    	"😒😒😒",
+    	"Zobaczcie mój nowy vocaloid",
+    	"Zaraz wam dyktature zrobię, tak jak za starych czasów",
+    	"Chodzę do szkoły atystycznej i jedyna skupiam się na mandze",
+    	"Nie lubię martwej natury"
+    	];
+
+    	z++;
+    	if(z > 2) z = 1;
+
+    	if (z == 1) member.guild.channels.get("226663040513343488").send(slowkaLosowe[Math.floor(Math.random() * slowkaLosowe.length)]);
+    	else if (z == 2) member.guild.channels.get("226663040513343488").send(slowkaLosowe[Math.floor(Math.random() * slowkaLosowe.length)]);
+    }, 1800000);
 });
 
 var i = 0;
