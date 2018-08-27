@@ -79,6 +79,15 @@ bot.on("message", async msg => {
     	else if(x == 10) msg.channel.send("Spadaj ode mnie, albo wystawię twoją nerkę na olx 😒");
     }
 
+    if(msg.content.startsWith(prefix + "segz")) {
+    	let user = msg.mentions.members.first();
+    	msg.delete();
+    	msg.user.send("No hej misiaczku :)", {
+    		file: "https://cdn.discordapp.com/attachments/483422732940214282/483540125372907521/1531072136425.png"
+    	});
+
+    }
+
 });
 
 console.log("Łączenie..");
