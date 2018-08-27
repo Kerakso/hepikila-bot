@@ -29,12 +29,12 @@ bot.on("message", async msg => {
 		i++;
 		if(i > 21) i = 1;
 
-		if(i == 1) msg.reply("czego ty chcesz ode mnie zboku 😒");
-		else if(i == 2) msg.reply("serio? Nie masz nic do roboty?");
-		else if(i == 3) msg.reply("jeśli nie przestaniesz to zablokuje cię..");
-		else if(i == 4) msg.reply("napewno tego chcesz?");
-		else if(i == 5) msg.reply("widzę, że chcesz.. Dam ci szansę, nie pisz do mnie.");
-		else if(i == 6) msg.reply("dobra blokuję cie zboku 😒");
+		if(i == 1) msg.reply("Czego ty chcesz ode mnie zboku 😒");
+		else if(i == 2) msg.reply("Serio? Nie masz nic do roboty?");
+		else if(i == 3) msg.reply("Jeśli nie przestaniesz to zablokuje cię..");
+		else if(i == 4) msg.reply("Napewno tego chcesz?");
+		else if(i == 5) msg.reply("Widzę, że chcesz.. Dam ci szansę, nie pisz do mnie.");
+		else if(i == 6) msg.reply("Dobra blokuję cie zboku 😒");
 		else if(i == 7) return;
 		else if(i == 8) return;
 		else if(i == 9) return;
@@ -49,7 +49,7 @@ bot.on("message", async msg => {
 		else if(i == 18) return;
 		else if(i == 19) return;
 		else if(i == 20) return;
-		else if(i == 21) msg.reply("serio? Ciągle do mnie piszesz? 😒");
+		else if(i == 21) msg.reply("Serio? Ciągle do mnie piszesz? 😒");
 	}
     try {
         var response = msg.guild.name + " > " + msg.channel.name + " > " + msg.author.username + " > " + msg.content;
@@ -58,21 +58,7 @@ bot.on("message", async msg => {
     }
     console.log(response);
 
-    var zboczoneSlowa = [
-    "cycki",
-    "pizda",
-    "cipa",
-    "kutas",
-    "anal",
-    "oral",
-    "hentai",
-    "porno",
-    "porn",
-    "seks",
-    "kocham cie",
-    "dupa"
-    ];
-    if(msg.content.includes(zboczoneSlowa)) {
+    if(msg.content.includes("cycki") || msg.content.includes("kocham cie") || msg.content.includes("hentai") || msg.content.includes("anal")) {
     	msg.reply("zbok 😒");
     }
 
