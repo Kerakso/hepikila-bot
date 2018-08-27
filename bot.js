@@ -21,34 +21,35 @@ bot.on("ready", () => {
     }, 30000);
 });
 
+var i = 0;
+
 bot.on("message", async msg => {
 	if(msg.author.bot) return;
-	var i = 0;
 	if(!msg.guild) {
 		i++;
-		if(i > 3) i = 1;
+		if(i > 21) i = 1;
 
 		if(i == 1) msg.reply("czego ty chcesz ode mnie zboku 😒");
-		if(i == 2) msg.reply("serio? Nie masz nic do roboty?");
-		if(i == 3) msg.reply("jeśli nie przestaniesz to zablokuje cię..");
-		if(i == 4) msg.reply("napewno tego chcesz?");
-		if(i == 5) msg.reply("widzę, że chcesz.. Dam ci szansę, nie pisz do mnie.");
-		if(i == 6) msg.reply("dobra blokuję cie zboku 😒");
-		if(i == 7) return;
-		if(i == 8) return;
-		if(i == 9) return;
-		if(i == 10) return;
-		if(i == 11) return;
-		if(i == 12) return;
-		if(i == 13) return;
-		if(i == 14) return;
-		if(i == 15) return;
-		if(i == 16) return;
-		if(i == 17) return;
-		if(i == 18) return;
-		if(i == 19) return;
-		if(i == 20) return;
-		if(i == 21) msg.reply("serio? Ciągle do mnie piszesz? 😒");
+		else if(i == 2) msg.reply("serio? Nie masz nic do roboty?");
+		else if(i == 3) msg.reply("jeśli nie przestaniesz to zablokuje cię..");
+		else if(i == 4) msg.reply("napewno tego chcesz?");
+		else if(i == 5) msg.reply("widzę, że chcesz.. Dam ci szansę, nie pisz do mnie.");
+		else if(i == 6) msg.reply("dobra blokuję cie zboku 😒");
+		else if(i == 7) return;
+		else if(i == 8) return;
+		else if(i == 9) return;
+		else if(i == 10) return;
+		else if(i == 11) return;
+		else if(i == 12) return;
+		else if(i == 13) return;
+		else if(i == 14) return;
+		else if(i == 15) return;
+		else if(i == 16) return;
+		else if(i == 17) return;
+		else if(i == 18) return;
+		else if(i == 19) return;
+		else if(i == 20) return;
+		else if(i == 21) msg.reply("serio? Ciągle do mnie piszesz? 😒");
 	}
     try {
         var response = msg.guild.name + " > " + msg.channel.name + " > " + msg.author.username + " > " + msg.content;
