@@ -65,13 +65,18 @@ bot.on("message", async msg => {
 
     if(msg.content.includes("<@483650694461521921>") || msg.content.toLowerCase().includes("hepi")) {
     	x++;
-    	if(x > 5) x = 1;
+    	if(x > 10) x = 1;
 
     	if(x == 1) msg.channel.send("Spadaj 😒");
     	else if(x == 2) msg.channel.send("Mówiłam, żebyś spadał 😒😒");
     	else if(x == 3) msg.channel.send("Zboku odczep się 😒");
     	else if(x == 4) msg.channel.send("...");
     	else if(x == 5) msg.reply("to zbok 😒 @everyone");
+    	else if(x == 6) msg.channel.send("Już yorek jest od ciebie lepszy");
+    	else if(x == 7) msg.channel.send("Myślisz, że jesteś fajny? ..Zboku 😒");
+    	else if(x == 8) msg.channel.send("Wole yorka niż ciebie");
+    	else if(x == 9) msg.channel.send("Jesteś wkurzający...");
+    	else if(x == 10) msg.channel.send("Spadaj ode mnie, albo wystawię twoją nerkę na olx 😒");
     }
 
 });
