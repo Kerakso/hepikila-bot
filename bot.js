@@ -25,7 +25,7 @@ bot.on("message", async msg => {
 	if(msg.author.bot) return;
 	if(!msg.guild) {
 		i++;
-		if(i > 3) i 1;
+		if(i > 3) i = 1;
 
 		if(i == 1) msg.reply("czego ty chcesz ode mnie zboku 😒");
 		if(i == 2) msg.reply("serio? Nie masz nic do roboty?");
