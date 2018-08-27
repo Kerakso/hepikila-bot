@@ -23,8 +23,8 @@ bot.on("ready", () => {
 
 bot.on("message", async msg => {
 	if(msg.author.bot) return;
+	var i = 0;
 	if(!msg.guild) {
-		var i = 0;
 		i++;
 		if(i > 3) i = 1;
 
