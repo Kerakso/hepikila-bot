@@ -59,18 +59,18 @@ bot.on("message", async msg => {
     }
     console.log(response);
 
-    if(msg.content.includes("cycki") || msg.content.includes("kocham cie") || msg.content.includes("hentai") || msg.content.includes("anal")) {
+    if(msg.content.toLowerCase().includes("cycki") || msg.content.toLowerCase().includes("kocham cie") || msg.content.toLowerCase().includes("hentai") || msg.content.toLowerCase().includes("anal")) {
     	msg.reply("zbok 😒");
     }
 
-    if(msg.content.includes("<@483650694461521921>") || msg.content.includes("hepi")) {
+    if(msg.content.includes("<@483650694461521921>") || msg.content.toLowerCase().includes("hepi")) {
     	x++;
     	if(x > 5) x = 1;
 
     	if(x == 1) msg.channel.send("Spadaj 😒");
     	else if(x == 2) msg.channel.send("Mówiłam, żebyś spadał 😒😒");
     	else if(x == 3) msg.channel.send("Zboku odczep się 😒");
-    	else if(x == 4) return;
+    	else if(x == 4) msg.channel.send("...");
     	else if(x == 5) msg.reply("to zbok 😒 @everyone");
     }
 
