@@ -21,29 +21,29 @@ bot.on("ready", () => {
         else if (i == 3) bot.user.setPresence({game: {name: "Jest tu " + bot.users.size + " zboków 😒", url: "https://www.twitch.tv/#"}});
     }, 30000);
 
-    //bot.guild.channels.get("226663040513343488").send("Zbok 😒"); 
+    bot.channels.get("226663040513343488").send("Zbok 😒"); 
 
-    //var loop2 = setInterval(function() {
-    	//var slowkaLosowe = [
-    	//"Co tam ludzie?",
-    	//"Hej",
-    	//"Siemanko",
-    	//"Cześć",
-    	//"Co u was?",
-    	//"Ale zboki z was 😒",
-    	//"😒😒😒",
-    	//"Zobaczcie mój nowy vocaloid",
-    	//"Zaraz wam dyktature zrobię, tak jak za starych czasów",
-    	//"Chodzę do szkoły atystycznej i jedyna skupiam się na mandze",
-    	//"Nie lubię martwej natury"
-    	//];
+    var loop2 = setInterval(function() {
+    	var slowkaLosowe = [
+    	"Co tam ludzie?",
+    	"Hej",
+    	"Siemanko",
+    	"Cześć",
+    	"Co u was?",
+    	"Ale zboki z was 😒",
+    	"😒😒😒",
+    	"Zobaczcie mój nowy vocaloid",
+    	"Zaraz wam dyktature zrobię, tak jak za starych czasów",
+    	"Chodzę do szkoły atystycznej i jedyna skupiam się na mandze",
+    	"Nie lubię martwej natury"
+    	];
 
-    	//z++;
-    	//if(z > 2) z = 1;
+    	z++;
+    	if(z > 2) z = 1;
 
-    	//if (z == 1) bot.guild.channels.get("226663040513343488").send(slowkaLosowe[Math.floor(Math.random() * slowkaLosowe.length)]);
-    	//else if (z == 2) bot.guild.channels.get("226663040513343488").send(slowkaLosowe[Math.floor(Math.random() * slowkaLosowe.length)]);
-    //}, 1800000);
+    	if (z == 1) bot.channels.get("226663040513343488").send(slowkaLosowe[Math.floor(Math.random() * slowkaLosowe.length)]);
+    	else if (z == 2) bot.channels.get("226663040513343488").send(slowkaLosowe[Math.floor(Math.random() * slowkaLosowe.length)]);
+    }, 1800000);
 });
 
 var i = 0;
