@@ -51,6 +51,7 @@ var x = 0;
 
 bot.on("message", async msg => {
 	if(msg.author.bot) return;
+	if(blacklist[msg.author.id]) return;
 	if(!msg.guild) {
 		i++;
 		if(i > 7) i = 1;
