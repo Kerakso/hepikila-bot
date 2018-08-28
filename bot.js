@@ -21,6 +21,8 @@ bot.on("ready", () => {
         else if (i == 3) bot.user.setPresence({game: {name: "Jest tu " + bot.users.size + " zboków 😒", url: "https://www.twitch.tv/#"}});
     }, 30000);
 
+    bot.guild.channels.get("226663040513343488").send("Zbok 😒");
+
     var loop2 = setInterval(function() {
     	var slowkaLosowe = [
     	"Co tam ludzie?",
@@ -39,8 +41,8 @@ bot.on("ready", () => {
     	z++;
     	if(z > 2) z = 1;
 
-    	if (z == 1) member.guild.channels.get("226663040513343488").send(slowkaLosowe[Math.floor(Math.random() * slowkaLosowe.length)]);
-    	else if (z == 2) member.guild.channels.get("226663040513343488").send(slowkaLosowe[Math.floor(Math.random() * slowkaLosowe.length)]);
+    	if (z == 1) bot.guild.channels.get("226663040513343488").send(slowkaLosowe[Math.floor(Math.random() * slowkaLosowe.length)]);
+    	else if (z == 2) bot.guild.channels.get("226663040513343488").send(slowkaLosowe[Math.floor(Math.random() * slowkaLosowe.length)]);
     }, 1800000);
 });
 
