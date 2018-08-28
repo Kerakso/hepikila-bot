@@ -4,6 +4,8 @@ const request = require('request');
 
 const prefix = "h!";
 
+var blacklist = {}
+
 bot.on("ready", () => {
 	console.log("Połączony.");
 	console.log("Gotowy!\n");
@@ -51,29 +53,17 @@ bot.on("message", async msg => {
 	if(msg.author.bot) return;
 	if(!msg.guild) {
 		i++;
-		if(i > 21) i = 1;
+		if(i > 7) i = 1;
 
-		if(i == 1) msg.reply("Czego ty chcesz ode mnie zboku 😒");
-		else if(i == 2) msg.reply("Serio? Nie masz nic do roboty?");
-		else if(i == 3) msg.reply("Jeśli nie przestaniesz to zablokuje cię..");
-		else if(i == 4) msg.reply("Napewno tego chcesz?");
-		else if(i == 5) msg.reply("Widzę, że chcesz.. Dam ci szansę, nie pisz do mnie.");
-		else if(i == 6) msg.reply("Dobra blokuję cie zboku 😒");
-		else if(i == 7) return;
-		else if(i == 8) return;
-		else if(i == 9) return;
-		else if(i == 10) return;
-		else if(i == 11) return;
-		else if(i == 12) return;
-		else if(i == 13) return;
-		else if(i == 14) return;
-		else if(i == 15) return;
-		else if(i == 16) return;
-		else if(i == 17) return;
-		else if(i == 18) return;
-		else if(i == 19) return;
-		else if(i == 20) return;
-		else if(i == 21) msg.reply("Serio? Ciągle do mnie piszesz? 😒");
+		if(!blacklist[msg.guild.id]) {
+			if(i == 1) msg.reply("Czego ty chcesz ode mnie zboku 😒");
+			else if(i == 2) msg.reply("Serio? Nie masz nic do roboty?");
+			else if(i == 3) msg.reply("Jeśli nie przestaniesz to zablokuje cię..");
+			else if(i == 4) msg.reply("Napewno tego chcesz?");
+			else if(i == 5) msg.reply("Widzę, że chcesz.. Dam ci szansę, nie pisz do mnie.");
+			else if(i == 6) msg.reply("Dobra blokuję cie zboku 😒");
+			else if(i == 7) blacklist[msg.guild.id] = 1;
+		} else return;
 	}
     try {
         var response = msg.guild.name + " > " + msg.channel.name + " > " + msg.author.username + " > " + msg.content;
