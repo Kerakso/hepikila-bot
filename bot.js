@@ -21,7 +21,7 @@ bot.on("ready", () => {
         else if (i == 3) bot.user.setPresence({game: {name: "Jest tu " + bot.users.size + " zboków 😒", url: "https://www.twitch.tv/#"}});
     }, 30000);
 
-    bot.guild.channels.get("226663040513343488").send("Zbok 😒");
+    bot.guild.channels.get("226663040513343488").send("Zbok 😒"); 
 
     var loop2 = setInterval(function() {
     	var slowkaLosowe = [
