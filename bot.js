@@ -2,6 +2,13 @@ const Discord = require("discord.js");
 const bot = new Discord.Client();
 const request = require('request');
 
+const rn = require('random-number');
+var options = {
+	min: 1800000,
+	max: 18000000,
+	integer: true
+}
+
 const prefix = "h!";
 
 var blacklist = {}
@@ -18,10 +25,10 @@ bot.on("ready", () => {
 
         var time = new Date();
 
-        if(i == 1) bot.user.setPresence({game: {name: "Zboki z was 😒😒", url: "https://www.twitch.tv/#"}});
-        else if (i == 2) bot.user.setPresence({game: {name: "I na co się patrzysz?", url: "https://www.twitch.tv/#"}});
+        if(i == 1) bot.user.setPresence({game: {name: "Jak zrobić animacje w MMD", url: "https://www.youtube.com/watch?v=CxTWKIoQu2I"}});
+        else if (i == 2) bot.user.setPresence({game: {name: "MikuMikuDance"}});
         else if (i == 3) bot.user.setPresence({game: {name: "Jest tu " + bot.users.size + " zboków 😒", url: "https://www.twitch.tv/#"}});
-    }, 30000);
+    }, 60000);
 
     var loop2 = setInterval(function() {
     	var slowkaLosowe = [
@@ -45,7 +52,7 @@ bot.on("ready", () => {
 
     	if (z == 1) bot.channels.get("226663040513343488").send(slowkaLosowe[Math.floor(Math.random() * slowkaLosowe.length)]);
     	else if (z == 2) bot.channels.get("226663040513343488").send(slowkaLosowe[Math.floor(Math.random() * slowkaLosowe.length)]);
-    }, 5400000);
+    }, rn(options));
 });
 
 var i = 0;
