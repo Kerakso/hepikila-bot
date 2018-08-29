@@ -37,8 +37,7 @@ bot.on("ready", () => {
     	"Chodzę do szkoły atystycznej i jedyna skupiam się na mandze",
     	"Nie lubię martwej natury",
     	"Skończyłam Dangaronpę",
-    	"Kto z was oglądał Re:Zero?",
-    	"./src/png/hepi.jpg"
+    	"Kto z was oglądał Re:Zero?"
     	];
 
     	z++;
@@ -55,27 +54,6 @@ var x = 0;
 bot.on("message", async msg => {
 	if(msg.author.bot) return;
 	if(blacklist[msg.author.id]) return;
-
-    var slowkaLosowe = [
-    "Co tam ludzie?",
-    "Hej",
-    "Siemanko",
-    "Cześć",
-    "Co u was?",
-    "Ale zboki z was 😒",
-    "😒😒😒",
-    "Zobaczcie mój nowy vocaloid",
-    "Zaraz wam dyktature zrobię, tak jak za starych czasów",
-    "Chodzę do szkoły atystycznej i jedyna skupiam się na mandze",
-    "Nie lubię martwej natury",
-    "Skończyłam Dangaronpę",
-    "Kto z was oglądał Re:Zero?",
-    "./src/png/hepi.jpg"
-    ];
-
-    if(msg.content === "foka") {
-    	msg.channel.send(slowkaLosowe[Math.floor(Math.random() * slowkaLosowe.length)]);
-    }
 
 	if(!msg.guild) {
 		i++;
