@@ -25,8 +25,8 @@ bot.on("ready", () => {
 
         var time = new Date();
 
-        if(i == 1) bot.user.setPresence({game: {name: "Jak zrobić animacje w MMD", url: "https://www.youtube.com/watch?v=CxTWKIoQu2I", type: 'WATCHING'}});
-        else if (i == 2) bot.user.setPresence({game: {name: bot.users.size + " zboków 😒", url: "https://www.youtube.com/watch?v=CxTWKIoQu2I", type: "LISTENING"}});
+        if(i == 1) bot.user.setPresence({game: {name: "Jak zrobić animacje w MMD", type: 'WATCHING'}});
+        else if (i == 2) bot.user.setPresence({game: {name: bot.users.size + " zboków 😒", type: "LISTENING"}});
     }, 60000);
 
     var loop2 = setInterval(function() {
