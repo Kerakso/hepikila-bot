@@ -21,14 +21,12 @@ bot.on("ready", () => {
 	var i = 0;
     var loop = setInterval(function() {
         i++;
-        if(i > 4) i = 1;
+        if(i > 2) i = 1;
 
         var time = new Date();
 
-        if(i == 1) bot.user.setActivity({type: "WATCHING"});
-        else if (i == 2) bot.user.setPresence({game: {name: "Jak zrobić animacje w MMD", url: "https://www.youtube.com/watch?v=CxTWKIoQu2I"}});
-        else if (i == 3) bot.user.setActivity({type: "LISTENING"});
-        else if (i == 4) bot.user.setPresence({game: {name: bot.users.size + " zboków 😒", url: "https://www.youtube.com/#"}});
+        if(i == 1) bot.user.setPresence({game: {name: "Jak zrobić animacje w MMD", url: "https://www.youtube.com/watch?v=CxTWKIoQu2I", type: 'WATCHING'}});
+        else if (i == 2) bot.user.setPresence({game: {name: bot.users.size + " zboków 😒", url: "https://www.youtube.com/watch?v=CxTWKIoQu2I", type: "LISTENING"}});
     }, 60000);
 
     var loop2 = setInterval(function() {
