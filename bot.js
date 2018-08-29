@@ -35,7 +35,10 @@ bot.on("ready", () => {
     	"Zobaczcie mój nowy vocaloid",
     	"Zaraz wam dyktature zrobię, tak jak za starych czasów",
     	"Chodzę do szkoły atystycznej i jedyna skupiam się na mandze",
-    	"Nie lubię martwej natury"
+    	"Nie lubię martwej natury",
+    	"Skończyłam Dangaronpę",
+    	"Kto z was oglądał Re:Zero?",
+    	"./src/png/hepi.jpg"
     	];
 
     	z++;
@@ -43,7 +46,7 @@ bot.on("ready", () => {
 
     	if (z == 1) bot.channels.get("226663040513343488").send(slowkaLosowe[Math.floor(Math.random() * slowkaLosowe.length)]);
     	else if (z == 2) bot.channels.get("226663040513343488").send(slowkaLosowe[Math.floor(Math.random() * slowkaLosowe.length)]);
-    }, 1800000);
+    }, 5400000);
 });
 
 var i = 0;
@@ -52,6 +55,28 @@ var x = 0;
 bot.on("message", async msg => {
 	if(msg.author.bot) return;
 	if(blacklist[msg.author.id]) return;
+
+    var slowkaLosowe = [
+    "Co tam ludzie?",
+    "Hej",
+    "Siemanko",
+    "Cześć",
+    "Co u was?",
+    "Ale zboki z was 😒",
+    "😒😒😒",
+    "Zobaczcie mój nowy vocaloid",
+    "Zaraz wam dyktature zrobię, tak jak za starych czasów",
+    "Chodzę do szkoły atystycznej i jedyna skupiam się na mandze",
+    "Nie lubię martwej natury",
+    "Skończyłam Dangaronpę",
+    "Kto z was oglądał Re:Zero?",
+    "./src/png/hepi.jpg"
+    ];
+
+    if(msg.content === "foka") {
+    	msg.channel.send(slowkaLosowe[Math.floor(Math.random() * slowkaLosowe.length)]);
+    }
+
 	if(!msg.guild) {
 		i++;
 		if(i > 7) i = 1;
@@ -79,7 +104,7 @@ bot.on("message", async msg => {
 
     if(msg.content.includes("<@483650694461521921>") || msg.content.toLowerCase().includes("hepi")) {
     	x++;
-    	if(x > 10) x = 1;
+    	if(x > 13) x = 1;
 
     	if(x == 1) msg.channel.send("Spadaj 😒");
     	else if(x == 2) msg.channel.send("Mówiłam, żebyś spadał 😒😒");
@@ -91,6 +116,9 @@ bot.on("message", async msg => {
     	else if(x == 8) msg.channel.send("Wole yorka niż ciebie");
     	else if(x == 9) msg.channel.send("Jesteś wkurzający...");
     	else if(x == 10) msg.channel.send("Spadaj ode mnie, albo wystawię twoją nerkę na olx 😒");
+    	else if(x == 11) msg.channel.send("Phi");
+    	else if(x == 12) msg.channel.send("Widziałam rzeczy brutalniejsze");
+    	else if(x == 13) msg.channel.send("Hmm");
     }
 
     if(msg.content.startsWith(prefix + "segz")) {
