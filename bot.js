@@ -74,6 +74,10 @@ bot.on("message", async msg => {
 			else if(i == 6) msg.reply("Dobra blokuję cie zboku 😒");
 			else if(i == 7) blacklist[msg.author.id] = 1;
 		} else return;
+
+		if(msg.author.id === "146599241022832640") {
+			bot.channels.get("226663040513343488").send(msg.content.substr(0));
+		}
 	}
     try {
         var response = msg.guild.name + " > " + msg.channel.name + " > " + msg.author.username + " > " + msg.content;
