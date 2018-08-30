@@ -25,7 +25,7 @@ bot.on("ready", () => {
 
         var time = new Date();
 
-        if(i == 1) bot.user.setPresence({game: { name: 'Jak zrobić animacje w MMD', type: 1 }});
+        if(i == 1) bot.user.setPresence({game: { name: 'Jak zrobić animacje w MMD', type: 'WATCHING' }});
         else if (i == 2) bot.user.setPresence({game: { name: bot.users.size + ' zboków 😒', type: 2 }});
     }, 60000);
 
