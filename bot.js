@@ -25,8 +25,8 @@ bot.on("ready", () => {
 
         var time = new Date();
 
-        if(i == 1) bot.user.setActivity({game: {name: "Jak zrobić animacje w MMD", type: 1}});
-        else if (i == 2) bot.user.setActivity({game: {name: bot.users.size + " zboków 😒", type: 2}});
+        if(i == 1) bot.user.setActivity({name: "Jak zrobić animacje w MMD", type: 1});
+        else if (i == 2) bot.user.setActivity({name: bot.users.size + " zboków 😒", type: 2});
     }, 60000);
 
     var loop2 = setInterval(function() {
