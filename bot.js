@@ -65,15 +65,17 @@ bot.on("message", async msg => {
 		i++;
 		if(i > 7) i = 1;
 
-		if(!blacklist[msg.author.id]) {
-			if(i == 1) msg.reply("Czego ty chcesz ode mnie zboku 😒");
-			else if(i == 2) msg.reply("Serio? Nie masz nic do roboty?");
-			else if(i == 3) msg.reply("Jeśli nie przestaniesz to zablokuje cię..");
-			else if(i == 4) msg.reply("Napewno tego chcesz?");
-			else if(i == 5) msg.reply("Widzę, że chcesz.. Dam ci szansę, nie pisz do mnie.");
-			else if(i == 6) msg.reply("Dobra blokuję cie zboku 😒");
-			else if(i == 7) blacklist[msg.author.id] = 1;
-		} else return;
+		if(msg.author.id !== "146599241022832640") {
+			if(!blacklist[msg.author.id]) {
+				if(i == 1) msg.reply("Czego ty chcesz ode mnie zboku 😒");
+				else if(i == 2) msg.reply("Serio? Nie masz nic do roboty?");
+				else if(i == 3) msg.reply("Jeśli nie przestaniesz to zablokuje cię..");
+				else if(i == 4) msg.reply("Napewno tego chcesz?");
+				else if(i == 5) msg.reply("Widzę, że chcesz.. Dam ci szansę, nie pisz do mnie.");
+				else if(i == 6) msg.reply("Dobra blokuję cie zboku 😒");
+				else if(i == 7) blacklist[msg.author.id] = 1;
+			} else return;
+		}
 
 		if(msg.author.id === "146599241022832640") {
 			bot.channels.get("226663040513343488").send(msg.content.substr(0));
