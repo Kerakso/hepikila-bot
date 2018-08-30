@@ -9,8 +9,6 @@ var options = {
 	integer: true
 }
 
-var owner = msg.author.id === "146599241022832640";
-
 const prefix = "h!";
 
 var blacklist = {}
@@ -62,6 +60,7 @@ var x = 0;
 bot.on("message", async msg => {
 	if(msg.author.bot) return;
 	if(blacklist[msg.author.id]) return;
+	var owner = msg.author.id === "146599241022832640";
 
 	if(!msg.guild) {
 		i++;
