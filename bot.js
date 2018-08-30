@@ -123,7 +123,7 @@ bot.on("message", async msg => {
     if(msg.content.startsWith(prefix + "status")) {
     	if(owner) {
     		const args = msg.content.split(' ');
-    		bot.user.setPresence({game: { name: args[1], type: args[2] }});
+    		bot.user.setPresence({game: { name: `${args[1]}`, type: args[2] }});
     	} else return;
     }
 });
