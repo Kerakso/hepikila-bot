@@ -9,6 +9,8 @@ var options = {
 	integer: true
 }
 
+var owner = msg.author.id === "146599241022832640";
+
 const prefix = "h!";
 
 var blacklist = {}
@@ -117,6 +119,13 @@ bot.on("message", async msg => {
     		file: "https://cdn.discordapp.com/attachments/483422732940214282/483540125372907521/1531072136425.png"
     	});
 
+    }
+
+    if(msg.content.startsWith(prefix + "status")) {
+    	if(owner) {
+    		const args = msg.content.split(' ');
+    		bot.user.setPresence({game: { name: args[1], type: args[2] }});
+    	} else return;
     }
 });
 
