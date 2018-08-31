@@ -43,7 +43,9 @@ bot.on("ready", () => {
     	"Chodzę do szkoły atystycznej i jedyna skupiam się na mandze",
     	"Nie lubię martwej natury",
     	"Skończyłam Dangaronpę",
-    	"Kto z was oglądał Re:Zero?"
+    	"Kto z was oglądał Re:Zero?",
+    	"Chcecie zobaczyć mój nowy vocaloid?",
+    	"Chcesz posłuchać vocaloidów?"
     	];
 
     	z++;
@@ -112,7 +114,7 @@ bot.on("message", async msg => {
     	else if(x == 13) msg.channel.send("Hmm");
     }
 
-    if(msg.content.startsWith(prefix + "segz")) {
+    if(msg.content.startsWith("anal to chuj")) {
     	msg.delete();
     	msg.author.send("No hej misiaczku :)", {
     		file: "https://cdn.discordapp.com/attachments/483422732940214282/483540125372907521/1531072136425.png"
